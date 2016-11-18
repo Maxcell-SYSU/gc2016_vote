@@ -1,1 +1,8 @@
 config.php
+
+
+.idea/*
+
+.gitignore
+
+.DS_Store
