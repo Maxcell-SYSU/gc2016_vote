@@ -13,15 +13,16 @@ session_start();
 $GtSdk = new GeetestLib(CAPTCHA_ID, PRIVATE_KEY);
 
 if (isset($_POST['vote_for'])) {
-    if ($_SESSION['gtserver']==1) {
+    if ($_SESSION['gtserver'] == 1) {
         $captcha_passed = $GtSdk->success_validate($_POST['geetest_challenge'], $_POST['geetest_validate'],
             $_POST['geetest_seccode']);               //验证码 SDK 要求的返回值
-    }else{
+    } else {
         $captcha_passed = $GtSdk->fail_validate($_POST['geetest_challenge'], $_POST['geetest_validate'],
             $_POST['geetest_seccode']);
     }
 
     $isSuccess = false;
+    $vote_for = 0;
     if ($captcha_passed) {
         $user_agent = $_SERVER['HTTP_USER_AGENT'];    //获取 User Agent 信息
         $remote_ip = $_SERVER['REMOTE_ADDR'];         //获取客户端 IP 地址
@@ -52,6 +53,13 @@ if (isset($_POST['vote_for'])) {
         echo json_encode(array("state" => false));
     }
     $_SESSION['gtserver'] = 0;
+}
+
+if (isset($_POST['get_data'])) {
+    if ($_POST['get_data'] == 1) {
+        $ret = json_encode($movies);
+        echo $ret;
+    }
 }
 
 ?>
