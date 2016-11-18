@@ -34,7 +34,8 @@ if (isset($_POST['vote_for'])) {
         $window_height = $_POST['window_height'];     //客户端窗口高度
         $click_x_axis = $_POST['click_x_axis'];       //投票按钮点击的横轴坐标，按百分比计，double 类型，下同
         $click_y_axis = $_POST['click_y_axis'];       //投票按钮点击的纵轴坐标
-        $captcha_verified = $_SESSION['gtserver'];    //验证码的验证状态，1 为通过
+        //$captcha_verified = ($_SESSION['gtserver'] == 1 || $_SESSION['isPass'] == 1) ? 1 : 0; //验证码的验证状态，1 为通过
+        $captcha_verified = $_SESSION['gtserver'];
 
         $db_mysqli = new mysqli($db_hostname, $db_username, $db_password, $db_database);
 
