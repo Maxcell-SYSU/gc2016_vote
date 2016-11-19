@@ -34,6 +34,10 @@ if (isset($_POST['vote_for'])) {
         $click_y_axis = $_POST['click_y_axis'];       //投票按钮点击的纵轴坐标
         //$captcha_verified = ($_SESSION['gtserver'] == 1 || $_SESSION['isPass'] == 1) ? 1 : 0; //验证码的验证状态，1 为通过
         $captcha_verified = $_SESSION['gtserver'];
+<<<<<<< HEAD
+=======
+
+>>>>>>> aad434a98a71d3e9641a0f147e7aa06e93b1211f
         $db_mysqli = new mysqli($db_hostname, $db_username, $db_password, $db_database);
         $sql = "insert into $db_table_list ('vote_for', 'user_agent', 'remote_ip', 'time', 'screen_width', " .
             "'screen_height', 'window_width', 'window_height', 'click_x_axis', 'click_y_axis', 'verified') " .
@@ -50,12 +54,20 @@ if (isset($_POST['vote_for'])) {
     }
     $_SESSION['gtserver'] = 0;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> aad434a98a71d3e9641a0f147e7aa06e93b1211f
 if (isset($_POST['get_data'])) {
     if ($_POST['get_data'] == 1) {
         $ret = json_encode($movies);
         echo $ret;
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> aad434a98a71d3e9641a0f147e7aa06e93b1211f
 ?>
 
 <html>
