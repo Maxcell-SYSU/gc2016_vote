@@ -1,0 +1,113 @@
+.main-bg {
+    background: url("//o5ngisf7c.qnssl.com/source/img/maxcell/vote-pc.jpg") no-repeat 0 0;
+    height: auto;
+}
+
+.fixed-bg {
+    background-size: cover;
+    background-position: top left;
+}
+
+.blur-bg {
+    background-color: rgba(200, 200, 200, 0);
+    background-size: cover;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgba(200, 200, 200, 0.2);
+    border-radius: 5px;
+}
+
+.container-fluid {
+    height: 100%;
+    position: center;
+}
+
+.bilibili {
+    height: 100%;
+    width: 100%;
+    border: hidden;
+    margin: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.container-inner {
+    padding: 60px 50px;
+}
+
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    max-height: 200px;
+    width: 100%;
+}
+
+.fluid-fixed {
+    padding: 0 0;
+}
+
+.vote-btn {
+    z-index: 15;
+    border-radius: 50%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgba(200, 200, 200, 0.2);
+    background-color: rgba(255, 255, 255, 0);
+
+    padding: 0 0;
+}
+
+.vimg {
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.vlist {
+    overflow-y: auto;
+}
+
+footer a {
+    color: #f5f5f5;
+}
+
+@media screen and (min-width: 768px) {
+    .main-bg {
+        min-height: 720px;
+        min-width: 1280px;
+        background-color:rgba(21, 21, 21, 1) ;
+    }
+
+    .vote-btn {
+        position: absolute;
+        height: 24%;
+        width: 13.5%;
+        margin-top: -8%;
+        margin-left: 75%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-bg {
+        background-image: url("//o5ngisf7c.qnssl.com/source/img/maxcell/vote-mob.jpg");
+        height: 150vw;
+        background-color: rgba(255, 102, 0, 1);
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    .vote-btn {
+        height: 56%;
+        width: 30.5%;
+        margin-top: 10%;
+        margin-left: 34.75%;
+    }
+
+    .dummy-hr {
+        height: 30vw;
+    }
+}
